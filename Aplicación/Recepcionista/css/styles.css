@@ -1,0 +1,74 @@
+body{
+  background-color: black;
+  color: white;
+  padding: 10px;
+}
+label{
+	font-size:30px;
+}
+header {
+  background-color: gray;
+  text-align: center;
+  padding: 10px;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+/* Navbar links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+/* Links - change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+#contenedor{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: stretch;
+	flex-wrap: wrap;
+}
+.boton{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  height: 150px;
+  width: 400px;
+  background-color: tomato;
+  text-align: center;
+  line-height: 150px;
+}
+a:link {
+  text-decoration: none;
+  color: white;
+}
+.cuerpo_center{
+	background: #333;
+	width: 1500px;
+	height: 500px;
+	margin: auto;
+	overflow: scroll;
+  padding: 20px;
+}
+#contenedor_left{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-star;
+	align-items: stretch;
+	flex-wrap: nowrap;
+}
+img{
+   max-width:90%;
+   vertical-align:middle;
+   margin-right: 10px;
+   margin-left: 10px;
+}
