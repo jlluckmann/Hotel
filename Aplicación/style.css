@@ -43,8 +43,14 @@ label{
 	margin-left:100px;
 }
 
-#contorno{
+.contorno{
    border: solid black;
    border-radius:10px;
 	 border-width: 5px;
+	 margin-left: 40px;
+   margin-right: 40px;
+	 height: auto;
+	 width: 220px;
+	 vertical-align: bottom;
+	 padding: 10px;
 }
