@@ -1,8 +1,15 @@
 body{
-	background-color:tomato;
+	background:url(imagenes/grisclaro.png) no-repeat center center fixed ;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+	background-attachment: fixed;
+	background-position: 0px 0px;
+	zoom: 100%
 }
 h1, h2, h3{
-	color: #FFFFFF;
+	color: #000000;
 }
 label{
 	color: #FFFFFF;
@@ -16,6 +23,7 @@ label{
 	justify-content: center;
 	align-items: stretch;
 	flex-wrap: nowrap;
+	margin-top: 50px;
 }
 
 #contenedor_left{
@@ -25,6 +33,18 @@ label{
 	align-items: stretch;
 	flex-wrap: nowrap;
 }
+
+#caja_tipo{
+	margin-left: 105px;
+	margin-right: 105px;
+}
+
 .hijo-c2{
 	margin-left:100px;
+}
+
+#contorno{
+   border: solid black;
+   border-radius:10px;
+	 border-width: 5px;
 }
