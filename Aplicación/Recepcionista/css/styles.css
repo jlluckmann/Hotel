@@ -66,9 +66,7 @@ a:link {
 	align-items: stretch;
 	flex-wrap: nowrap;
 }
-img{
-   max-width:90%;
-   vertical-align:middle;
-   margin-right: 10px;
-   margin-left: 10px;
+.cuerpo_center2{
+	background: #333;
+  padding: 30px;
 }
