@@ -15,7 +15,10 @@
 			Tipo de Habitación
 		</td>
 		<td>
-			Precio
+			Precio Habitación
+		</td>
+		<td>
+			Precio Total
 		</td>
 		<td>
 			Cantidad
@@ -28,6 +31,7 @@
 		$conexion=mysqli_connect($host,$user,$pw)or die("Error al conectar con el servidor");
 		mysqli_select_db($conexion,$db)or die("Error al conectar con la base de datos");
 		$sql = "SELECT habitacion.TipoHab, Precio,
+		(DATEDIFF('$fecha2', '$fecha1')+1)*Precio,
 		COUNT(DISTINCT habitacion.NumHab)
 		FROM habitacion, tipodehabitacion
 		WHERE habitacion.TipoHab=tipodehabitacion.TipoHab
@@ -35,7 +39,8 @@
                               		FROM   habitacion, reserva
                               		WHERE  reserva.NumHab=habitacion.NumHab
                               		AND (reserva.FechaReserva BETWEEN CAST('$fecha1' AS DATE) and CAST('$fecha2' AS DATE)
-                                  		 OR reserva.FechaSalida BETWEEN CAST('$fecha1' AS DATE) and CAST('$fecha2' AS DATE)))
+                                  		 OR reserva.FechaSalida BETWEEN CAST('$fecha1' AS DATE) and CAST('$fecha2' AS DATE)
+																		   OR reserva.FechaReserva<='$fecha1' AND reserva.FechaSalida>='$fecha2'))
 		GROUP BY habitacion.TipoHab";
 		$rs = mysqli_query($conexion,$sql) or die(mysql_error());
 		$numeroTuplas=mysqli_num_rows($rs);

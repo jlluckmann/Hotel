@@ -30,7 +30,8 @@
                               		FROM   habitacion, reserva
                               		WHERE  reserva.NumHab=habitacion.NumHab
                               		AND (reserva.FechaReserva BETWEEN CAST('$fecha1' AS DATE) and CAST('$fecha2' AS DATE)
-                                  		 OR reserva.FechaSalida BETWEEN CAST('$fecha1' AS DATE) and CAST('$fecha2' AS DATE)))";
+                                  		 OR reserva.FechaSalida BETWEEN CAST('$fecha1' AS DATE) and CAST('$fecha2' AS DATE)
+																		 	 OR reserva.FechaReserva<='$fecha1' AND reserva.FechaSalida>='$fecha2'))";
 		$rs = mysqli_query($conexion,$sql) or die(mysql_error());
 		$numeroTuplas=mysqli_num_rows($rs);
 		$numerocolumns=mysqli_num_fields($rs);
