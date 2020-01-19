@@ -9,13 +9,6 @@
 	<h1 align="center">Listado de Habitaciones Disponibles</h1>
 	</header>
 <div class="cuerpo_center2" align="center">
-<table border = '1' style = "border-collapse: collapse;" bgcolor = '#33334d'>
-	<tr bgcolor="#000033" style="font-weight: bold; color:white">
-		<td>
-			Número<br>
-			Habitación
-		</td>
-	</tr>
 <?php
 	  require('conexion.php');
 		$Tipo_habitacion = $_GET['Tipo_habitacion'];
@@ -36,14 +29,15 @@
 		$numeroTuplas=mysqli_num_rows($rs);
 		$numerocolumns=mysqli_num_fields($rs);
 
+		echo "<form method=\"post\" action=\"registrar_reserva.php\">";
 		for($i=0;$i<$numeroTuplas;$i++){
-			$fila=mysqli_fetch_array($rs);
-			echo "<tr>";
-			for($j=0;$j<$numerocolumns;$j++){
-				echo "<td>$fila[$j]</td>";
-			}
-			echo "</tr>";
-        }
+				$fila=mysqli_fetch_array($rs);
+				echo "<input type=\"checkbox\" name=\"habit[]\" value=\"$fila[0]\" >$fila[0]<br>";
+				}
+		echo "<input type=\"hidden\" name=\"fecha1\" value=\"$fecha1\" >";
+		echo "<input type=\"hidden\" name=\"fecha2\" value=\"$fecha2\" >";
+		echo "<br>";
+		echo "<input type=\"submit\" name=\"formSubmit\" value=\"Reservar\">";
+		echo "</form>";
 ?>
-</table>
 </div>
