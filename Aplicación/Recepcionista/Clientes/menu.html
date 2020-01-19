@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+
+  <head>
+     <meta charset="utf-8"/>
+     <meta name="description" content="Ejemplo">
+     <title>Info-registro: Hotel</title>
+     <link rel="stylesheet" href="../css/styles.css" type="text/css"/>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="js/jquery-3.4.1.min.js"></script>
+ 		 <script src="js/index.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <nav class="topnav">
+          <a href="../inicio.html"><h1  align="left"> Volver </h1> </a>
+      </nav>
+			<h1 align="center">Sistema de Info-registro</h1>
+			<h2 align="center">Clientes</h2>
+		</header>
+    <nav class="topnav">
+      <a href="registrar_cliente.html"> <h1>Registrar cliente </h1></a>
+    </nav>
+    <br>
+    <main>
+      <div id="contenedor">
+        <div class="cuerpo_center" align="center">
+          <label>Busqueda cliente</label>
+          <form accept-charset="utf-8" method="POST">
+          <input type="text" name="busqueda" id="busqueda" value="" placeholder="Ingrese nombre del cliente" maxlength="30" autocomplete="off" onKeyUp="buscar();" />
+          </form>
+          <div id="resultadoBusqueda"></div>
+        </div>
+      </div>
+    </main>
+  </body>
+
+</html>
