@@ -10,10 +10,10 @@
 		<meta charset="UTF-8"> <!-- Codificacion correta de escritura -->
 		<meta name="title" content="Título de la WEB"> <!-- Título(Para buscadores) -->
 		<meta name="description" content="Descripción de la WEB">   <!-- Descripcion(Para buscadores) -->
-		<link href="style.php" rel="stylesheet" type="text/css"/>
+		<link href="../../css/styles.css" rel="stylesheet" type="text/css"/>
 	</head>
 	<body>
-		<p>Estás seguro que deseas eliminar el registro del alumno de rut: <?php echo"$rut"?> ?</p>
+		<p>Estás seguro que deseas eliminar el registro del cliente de rut: <?php echo"$rut"?> ?</p>
 		<br>
 		<?php 	echo"<form method=\"get\" action=\"delete_cliente.php\">";
 				echo"<input type=\"hidden\" name=\"rut\" value=\"$rut\" >";
