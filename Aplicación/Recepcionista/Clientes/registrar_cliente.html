@@ -7,19 +7,25 @@
 		<meta name="description" content="Descripción de la WEB">
 		<link href="../css/styles.css" rel="stylesheet">
 	</head>
+
   <body>
+		<header>
+			 		<nav class="topnav">
+						<a href="menu.html"><h1  align="left"> Volver </h1> </a>
+			 		</nav>
 
-  <form action="php/insert_cliente.php" method="get">
-    	 <h1 align="center">Ingresar:</h1>
+    	 		<h1 align="center">Ingresar:</h1>
+		 </header>
        <h2> Datos del Cliente </h2>
-       <input type="text"  name="Nombre" placeholder="Nombre" />
-       <input type="text" name="Apellidop" placeholder="Apellido Paterno" />
-       <input type="text" name="Apellidom" placeholder="Apellido Materno" />
-			 <br><br>
-       <input type="text" name="Rut" placeholder="Rut" />
-       <br><br>
-       <input type="submit" value= "Enviar"/>
-  </form>
-
+			 <form action="php/insert_cliente.php" method="get">
+       		<input type="text"  name="Nombre" placeholder="Nombre" />
+       		<input type="text" name="Apellidop" placeholder="Apellido Paterno" />
+       		<input type="text" name="Apellidom" placeholder="Apellido Materno" />
+			 		<br><br>
+       		<input type="text" name="Rut" placeholder="Rut" />
+       		<br><br>
+       		<input type="submit" value= "Enviar"/>
+  	   </form>
   </body>
+
 </html>

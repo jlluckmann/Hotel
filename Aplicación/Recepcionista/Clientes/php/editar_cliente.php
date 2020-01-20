@@ -21,31 +21,33 @@
 		<link href="../../css/styles.css" rel="stylesheet" type="text/css"/>
 	</head>
 	<body>
-		<main id="contenedor_left">
-			<div>
-				<h1>Hotel</h1><br>
-				<h2>Formulario de registro de clientes</h2>
+		<header>
+				<nav class="topnav">
+						<a href="../menu.html"><h1  align="left"> Volver </h1> </a>
+				</nav>
+				<h1>Editar Cliente</h1><br>
+		</header>
 				<form method="get" action="update_cliente.php">
-				<section id="contenedor_center">
+					<section id="contenedor_center">
 						<div>
 
 							<h3> Datos Personales </h3>
-							<label>Rut:</label>
+							<font size=4  align="center"><h>Rut</h></font>
 							<br>
-							<?php echo"<input type=\"text\" name=\"rut\" size=\"8px\" title=\"Ingrese su rut\" value=\"$fila[0]\" readonly>"?> <!--readonly hace que este campo no sea momdificable-->
+							<?php echo"<input type=\"text\" name=\"rut\" size=\"20px\" title=\"Ingrese su rut\" value=\"$fila[0]\" readonly>"?> <!--readonly hace que este campo no sea momdificable-->
 							<br>
 							<br>
-							<label>Nombres:</label>
+							<font size=4  align="center"><h>Nombres</h></font>
 							<br>
 							<?php echo"<input type=\"text\" name=\"nombre\" size=\"20px\" title=\"Ingrese ambos nombres del alumno\" value=\"$fila[1]\" required>" ?> <!--requiered hace que este campo deba ser completado-->
 							<br>
 							<br>
-							<label>Apellido Paterno:</label>
+							<font size=4  align="center"><h>Apellido Paterno</h></font>
 							<br>
 							<?php echo"<input type=\"text\" name=\"apellido_p\" size=\"20px\" title=\"Ingrese apellido paterno\" value=\"$fila[2]\" required>" ?>
 							<br>
 							<br>
-							<label>Apellido Materno:</label>
+							<font size=4  align="center"><h>Apellido materno</h></font>
 							<br>
 							<?php echo"<input type=\"text\" name=\"apellido_m\" size=\"20px\" title=\"Ingrese apellido materno\" value=\"$fila[3]\" required>" ?>
 							<br>
@@ -55,7 +57,5 @@
 				<br>
 				<input type="submit" value="Guardar">
 				</form>
-			</div>
-		</main>
 	</body>
 </html>

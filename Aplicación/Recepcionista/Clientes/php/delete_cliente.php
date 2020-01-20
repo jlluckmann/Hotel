@@ -14,9 +14,18 @@
 		<meta charset="UTF-8"> <!-- Codificacion correta de escritura -->
 		<meta name="title" content="Hotel - Registro de Clientes"> <!-- Título(Para buscadores) -->
 		<meta name="description" content="Descripción de la WEB">   <!-- Descripcion(Para buscadores) -->
-		<link href="style.php" rel="stylesheet" type="text/css"/>
+		<link href="../../css/styles.css" rel="stylesheet" type="text/css"/>
 	</head>
+
 	<body>
-		<p>El registro se ha eliminado correctamente</p> <a href="../menu.html">volver</a>
+		<header>
+			<nav class="topnav">
+					<a href="../menu.html"><h1  align="left"> Volver </h1> </a>
+			</nav>
+			<font size=5  align="justify">
+				<p>El registro se ha eliminado correctamente.</p>
+			</font>
+		</header>
 	</body>
+	
 </html>

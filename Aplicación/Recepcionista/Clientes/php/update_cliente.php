@@ -21,6 +21,13 @@
 		<link href="../../css/styles.css" rel="stylesheet" type="text/css"/>
 	</head>
 	<body>
-		<p>Los datos del cliente se han actualizado correctamente</p> <a href="../menu.html">volver</a>
+		<header>
+			<nav class="topnav">
+					<a href="../menu.html"><h1  align="left"> Volver </h1> </a>
+			</nav>
+			<font size=5  align="justify">
+				<p>Los datos del cliente se han actualizado correctamente.</p>
+			</font>
+		</header>
 	</body>
 </html>
