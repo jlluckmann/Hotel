@@ -4,6 +4,7 @@
 		<meta charset="UTF-8">
 		<link href="../../css/styles.css" rel="stylesheet">
 	</head>
+
 	<body>
 	<header>
 		<nav class="topnav">
@@ -11,20 +12,18 @@
 		</nav>
 	  <h1 align="center">Habitaciones Disponibles</h1>
 	</header>
-<div class="cuerpo_center2" align="center">
-<table border = '1' style = "border-collapse: collapse;" bgcolor = '#33334d'>
-	<tr bgcolor="#000033" style="font-weight: bold; color:white">
+
+<div align="center">
+<table border = '2' style = "border-collapse: collapse;" bgcolor = '#FFFFFF'>
+	<tr bgcolor="#303030" style="font-weight: bold; color:white">
 		<td>
 			Tipo de Habitación
 		</td>
 		<td>
-			Precio Habitación
+			Precio por día
 		</td>
 		<td>
-			Precio Total
-		</td>
-		<td>
-			Cantidad
+			N° Habitaciones disponibles
 		</td>
 	</tr>
 <?php
@@ -33,9 +32,7 @@
 		$fecha2 = $_GET['fecha2'];
 		$conexion=mysqli_connect($host,$user,$pw)or die("Error al conectar con el servidor");
 		mysqli_select_db($conexion,$db)or die("Error al conectar con la base de datos");
-		$sql = "SELECT habitacion.TipoHab, Precio,
-		(DATEDIFF('$fecha2', '$fecha1')+1)*Precio,
-		COUNT(DISTINCT habitacion.NumHab)
+		$sql = "SELECT habitacion.TipoHab, Precio, COUNT(DISTINCT habitacion.NumHab)
 		FROM habitacion, tipodehabitacion
 		WHERE habitacion.TipoHab=tipodehabitacion.TipoHab
 		AND habitacion.NumHab NOT IN (SELECT habitacion.NumHab
@@ -55,14 +52,115 @@
 			for($j=0;$j<$numerocolumns;$j++){
 				echo "<td>$fila[$j]</td>";
 			}
-			echo "<td><form method=\"get\" action=\"select_habitacion.php\">";
-			echo "<input type=\"hidden\" name=\"Tipo_habitacion\" value=\"$fila[0]\" >";
-			echo "<input type=\"hidden\" name=\"fecha1\" value=\"$fecha1\" >";
-			echo "<input type=\"hidden\" name=\"fecha2\" value=\"$fecha2\" >";
-			echo "<input type=\"submit\" value=\"Ver habitaciones\">";
-			echo "</form></td>";
-			echo "</tr>";
+
         }
 ?>
 </table>
 </div>
+
+
+
+<main>
+			<div id=contenedor_center>
+				<div class="contorno" align="center">
+					<br>
+						<h1 align="center">Doble</h1>
+						<?php
+							  require('conexion.php');
+								$Tipo_habitacion = 'doble';
+								$fecha1 = $_GET['fecha1'];
+								$fecha2 = $_GET['fecha2'];
+								$conexion=mysqli_connect($host,$user,$pw)or die("Error al conectar con el servidor");
+								mysqli_select_db($conexion,$db)or die("Error al conectar con la base de datos");
+								$sql1 = "SELECT habitacion.NumHab
+								FROM habitacion
+								WHERE TipoHab='$Tipo_habitacion'
+								AND habitacion.NumHab NOT IN (SELECT habitacion.NumHab
+						                              		FROM   habitacion, reserva
+						                              		WHERE  reserva.NumHab=habitacion.NumHab
+						                              		AND (reserva.FechaReserva BETWEEN CAST('$fecha1' AS DATE) and CAST('$fecha2' AS DATE)
+						                                  		 OR reserva.FechaSalida BETWEEN CAST('$fecha1' AS DATE) and CAST('$fecha2' AS DATE)
+																								 	 OR reserva.FechaReserva<='$fecha1' AND reserva.FechaSalida>='$fecha2'))";
+								$rs1 = mysqli_query($conexion,$sql1) or die(mysql_error());
+								$numeroTuplas=mysqli_num_rows($rs1);
+								$numerocolumns=mysqli_num_fields($rs1);
+
+								echo "<form method=\"post\" action=\"registrar_reserva.php\">";
+								for($i=0;$i<$numeroTuplas;$i++){
+										$fila=mysqli_fetch_array($rs1);
+										echo "<input type=\"checkbox\" name=\"habit[]\" value=\"$fila[0]\" >$fila[0]<br>";
+										}
+
+						?>
+						</div>
+					</br>
+
+
+					<div class="contorno" align="center">
+						<br>
+							<h1 align="center">Matrimonial</h1>
+							<?php
+								  require('conexion.php');
+									$Tipo_habitacion = 'matrimonial';
+									$fecha1 = $_GET['fecha1'];
+									$fecha2 = $_GET['fecha2'];
+									$conexion=mysqli_connect($host,$user,$pw)or die("Error al conectar con el servidor");
+									mysqli_select_db($conexion,$db)or die("Error al conectar con la base de datos");
+									$sql2 = "SELECT habitacion.NumHab
+									FROM habitacion
+									WHERE TipoHab='$Tipo_habitacion'
+									AND habitacion.NumHab NOT IN (SELECT habitacion.NumHab
+							                              		FROM   habitacion, reserva
+							                              		WHERE  reserva.NumHab=habitacion.NumHab
+							                              		AND (reserva.FechaReserva BETWEEN CAST('$fecha1' AS DATE) and CAST('$fecha2' AS DATE)
+							                                  		 OR reserva.FechaSalida BETWEEN CAST('$fecha1' AS DATE) and CAST('$fecha2' AS DATE)
+																									 	 OR reserva.FechaReserva<='$fecha1' AND reserva.FechaSalida>='$fecha2'))";
+									$rs2 = mysqli_query($conexion,$sql2) or die(mysql_error());
+									$numeroTuplas=mysqli_num_rows($rs2);
+									$numerocolumns=mysqli_num_fields($rs2);
+
+									echo "<form method=\"post\" action=\"registrar_reserva.php\">";
+									for($i=0;$i<$numeroTuplas;$i++){
+											$fila=mysqli_fetch_array($rs2);
+											echo "<input type=\"checkbox\" name=\"habit[]\" value=\"$fila[0]\" >$fila[0]<br>";
+											}
+							?>
+							</div>
+						</br>
+
+						<div class="contorno" align="center">
+							<br>
+								<h1 align="center">Simple</h1>
+								<?php
+									  require('conexion.php');
+										$Tipo_habitacion = 'simple';
+										$fecha1 = $_GET['fecha1'];
+										$fecha2 = $_GET['fecha2'];
+										$conexion=mysqli_connect($host,$user,$pw)or die("Error al conectar con el servidor");
+										mysqli_select_db($conexion,$db)or die("Error al conectar con la base de datos");
+										$sql3 = "SELECT habitacion.NumHab
+										FROM habitacion
+										WHERE TipoHab='$Tipo_habitacion'
+										AND habitacion.NumHab NOT IN (SELECT habitacion.NumHab
+								                              		FROM   habitacion, reserva
+								                              		WHERE  reserva.NumHab=habitacion.NumHab
+								                              		AND (reserva.FechaReserva BETWEEN CAST('$fecha1' AS DATE) and CAST('$fecha2' AS DATE)
+								                                  		 OR reserva.FechaSalida BETWEEN CAST('$fecha1' AS DATE) and CAST('$fecha2' AS DATE)
+																										 	 OR reserva.FechaReserva<='$fecha1' AND reserva.FechaSalida>='$fecha2'))";
+										$rs3 = mysqli_query($conexion,$sql3) or die(mysql_error());
+										$numeroTuplas=mysqli_num_rows($rs3);
+										$numerocolumns=mysqli_num_fields($rs3);
+
+										echo "<form method=\"post\" action=\"registrar_reserva.php\">";
+										for($i=0;$i<$numeroTuplas;$i++){
+												$fila=mysqli_fetch_array($rs3);
+												echo "<input type=\"checkbox\" name=\"habit[]\" value=\"$fila[0]\" >$fila[0]<br>";
+												}
+								?>
+								</div>
+							</br>
+						</div>
+
+		</main>
+
+</html>

@@ -21,7 +21,7 @@ header {
 /* Navbar links */
 .topnav a {
   display: block;
-  color: #f1f1f1;
+  color: #ECECEC;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -87,6 +87,15 @@ overflow: scroll;
 	justify-content: flex-star;
 	align-items: stretch;
 	flex-wrap: nowrap;
+}
+
+#contenedor_center{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: stretch;
+	flex-wrap: nowrap;
+	margin-top: 50px;
 }
 
 

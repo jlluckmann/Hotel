@@ -7,8 +7,8 @@
 		<meta name="description" content="Descripción de la WEB">
 		<link href="../../css/styles.css" rel="stylesheet">
 	</head>
-  <body>
 
+  <body>
 		<header>
 			<nav class="topnav">
 					<a href="../menu.html"><h1  align="left"> Volver </h1> </a>
