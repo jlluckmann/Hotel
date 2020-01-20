@@ -6,6 +6,9 @@
 	</head>
 	<body>
 	<header>
+		<nav class="topnav">
+				<a href="cancelar_reserva.php"><h1  align="left"> Volver </h1> </a>
+		</nav>
 	<h1 align="center">Lista de Reservas</h1>
 	<h2 align="center">Cliente
 	<?php
