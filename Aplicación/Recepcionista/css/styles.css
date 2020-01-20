@@ -61,6 +61,23 @@ header {
 	 padding: 0px;
 }
 
+.contorno_pantalla_blanca{
+   background: #FFFFFF;
+   border: solid black;
+   border-radius:10px;
+	 border-width: 5px;
+	 margin-left: 20px;
+   margin-right: 20px;
+   margin-top:-10px;
+	 height: 250px;
+	 width: 210px;
+	 vertical-align: bottom;
+	 padding: 0px;
+   overflow: scroll;
+}
+
+
+
 a:link {
   text-decoration: none;
   color: white;
@@ -90,7 +107,7 @@ overflow: scroll;
 }
 
 #contenedor_center{
-	display: flex;
+  display: flex;
 	flex-direction: row;
 	justify-content: center;
 	align-items: stretch;
@@ -115,4 +132,9 @@ overflow: scroll;
 	border-radius:8px;
 	float:right;
   padding: 3px
+}
+
+.awesomeText {
+    font-size: 150%;
+    margin-left: 90px;
 }

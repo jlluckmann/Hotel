@@ -24,9 +24,9 @@
 				}
 	?></h2>
 	</header>
-<div class="cuerpo_center2" align="center">
-<table border = '1' style = "border-collapse: collapse;" bgcolor = '#33334d'>
-	<tr bgcolor="#000033" style="font-weight: bold; color:white">
+<div align="center">
+<table border = '2' style = "border-collapse: collapse;" bgcolor = '#FFFFFF'>
+	<tr bgcolor="#303030" style="font-weight: bold; color:white">
 		<td>
 			Número de Habitación
 		</td>
@@ -35,6 +35,9 @@
 		</td>
 		<td>
 			Fecha Final
+		</td>
+		<td >
+
 		</td>
 	</tr>
 <?php
@@ -61,7 +64,7 @@
 			echo "<input type=\"hidden\" name=\"Numero_habitacion\" value=\"$fila[0]\" >";
 			echo "<input type=\"hidden\" name=\"fecha1\" value=\"$fila[1]\" >";
 			echo "<input type=\"hidden\" name=\"fecha2\" value=\"$fila[2]\" >";
-			echo "<input type=\"submit\" value=\"Cancelar\">";
+			echo "<input type=\"submit\" value=\"Cancelar reserva\">";
 			echo "</form></td>";
 			echo "</tr>";
         }

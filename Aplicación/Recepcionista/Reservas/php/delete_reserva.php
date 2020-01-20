@@ -19,7 +19,12 @@
 		<meta name="description" content="Descripción de la WEB">   <!-- Descripcion(Para buscadores) -->
 		<link href="../../css/styles.css" rel="stylesheet" type="text/css"/>
 	</head>
-	<body>
-		<p>El registro se ha eliminado correctamente</p> <a href="../menu.html">volver</a>
-	</body>
+	<header>
+		<nav class="topnav">
+        <a href="../menu.html"><h1  align="left"> Volver </h1> </a>
+    </nav>
+		<font size=5  align="left">
+			<p>El registro se ha eliminado correctamente</p> 
+		</font>
+	</header>
 </html>

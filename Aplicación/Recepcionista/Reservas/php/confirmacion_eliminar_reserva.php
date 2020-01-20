@@ -16,7 +16,9 @@
 		<link href="../../css/styles.css" rel="stylesheet" type="text/css"/>
 	</head>
 	<body>
-		<p>Estás seguro que deseas cancelar la reserva del cliente de rut: <?php echo"$rut"?> ?</p>
+		<font size=5  align="left">
+			<p>Estás seguro que deseas cancelar la reserva del cliente de rut: <?php echo"$rut"?> ?</p>
+		<font size=5  align="left">
 		<br>
 		<?php 	echo"<form method=\"get\" action=\"delete_reserva.php\">";
 				echo"<input type=\"hidden\" name=\"rut\" value=\"$rut\" >";

@@ -61,8 +61,12 @@
 
 
 <main>
+			<?php
+				echo "<form method=\"post\" action=\"registrar_reserva.php\">"
+			?>
+
 			<div id=contenedor_center>
-				<div class="contorno" align="center">
+				<div class="contorno_pantalla_blanca" align="center">
 					<br>
 						<h1 align="center">Doble</h1>
 						<?php
@@ -90,13 +94,13 @@
 										$fila=mysqli_fetch_array($rs1);
 										echo "<input type=\"checkbox\" name=\"habit[]\" value=\"$fila[0]\" >$fila[0]<br>";
 										}
-
+										echo "<br>";
 						?>
 						</div>
 					</br>
 
 
-					<div class="contorno" align="center">
+					<div class="contorno_pantalla_blanca" align="center">
 						<br>
 							<h1 align="center">Matrimonial</h1>
 							<?php
@@ -124,11 +128,12 @@
 											$fila=mysqli_fetch_array($rs2);
 											echo "<input type=\"checkbox\" name=\"habit[]\" value=\"$fila[0]\" >$fila[0]<br>";
 											}
+											echo "<br>";
 							?>
 							</div>
 						</br>
 
-						<div class="contorno" align="center">
+						<div class="contorno_pantalla_blanca" align="center">
 							<br>
 								<h1 align="center">Simple</h1>
 								<?php
@@ -156,11 +161,23 @@
 												$fila=mysqli_fetch_array($rs3);
 												echo "<input type=\"checkbox\" name=\"habit[]\" value=\"$fila[0]\" >$fila[0]<br>";
 												}
+												echo "<br>";
 								?>
 								</div>
 							</br>
 						</div>
 
+						<div align="center">
+							<?php
+							echo "<input type=\"hidden\" name=\"fecha1\" value=\"$fecha1\" >";
+							echo "<input type=\"hidden\" name=\"fecha2\" value=\"$fecha2\" >";
+							echo "<br>";
+							echo "<input type=\"submit\" name=\"formSubmit\" value=\"Reservar\">";
+							echo "</form>";
+							?>
+						</div>
+
 		</main>
+	</body>
 
 </html>
