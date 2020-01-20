@@ -16,6 +16,7 @@
 		</header>
   <form action="lista_reservas_cancelar.php" method="get">
        <h1 align="center">Buscador:</h1>
+       <h2> Reservas </h2>
 
 	 <div style="color: white">Rut cliente <select name="Rut">
 	 <option><?php

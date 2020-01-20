@@ -39,7 +39,7 @@
 							<br>
 							<font size=4  align="center"><h>Nombres</h></font>
 							<br>
-							<?php echo"<input type=\"text\" name=\"nombre\" size=\"20px\" title=\"Ingrese ambos nombres del alumno\" value=\"$fila[1]\" required>" ?> <!--requiered hace que este campo deba ser completado-->
+							<?php echo"<input type=\"text\" name=\"nombre\" size=\"20px\" title=\"Ingrese ambos nombres del cliente\" value=\"$fila[1]\" required>" ?> <!--requiered hace que este campo deba ser completado-->
 							<br>
 							<br>
 							<font size=4  align="center"><h>Apellido Paterno</h></font>

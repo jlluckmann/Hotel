@@ -1,0 +1,109 @@
+body{
+  background: url(../../imagenes/grisclaro.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+	background-attachment: fixed;
+	background-position: 0px 0px;
+	zoom: 100%
+}
+label{
+	font-size:30px;
+}
+header {
+  text-align: center;
+  padding: 10px;
+}
+.topnav {
+  overflow: hidden;
+}
+/* Navbar links */
+.topnav a {
+  display: block;
+  color: #f1f1f1;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+/* Links - change color on hover */
+.topnav a:hover {
+  color: white;
+}
+#contenedor{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: stretch;
+	flex-wrap: wrap;
+}
+.boton{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  height: 150px;
+  width: 400px;
+  background-color: tomato;
+  text-align: center;
+  line-height: 150px;
+}
+
+.contorno{
+   border: solid black;
+   border-radius:10px;
+	 border-width: 5px;
+	 margin-left: 40px;
+   margin-right: 40px;
+	 height: auto;
+	 width: 220px;
+	 vertical-align: bottom;
+	 padding: 10px;
+}
+
+a:link {
+  text-decoration: none;
+  color: white;
+}
+.cuerpo_center{
+background: white;
+width: 600px;
+border-radius:8px;
+height: 500px;
+margin: auto;
+overflow: scroll;
+}
+
+.cuerpo_center2{
+	background: white;
+  width: 600px;
+  border-radius: 8px;
+  height: 205px;
+  margin:auto;
+}
+#contenedor_left{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-star;
+	align-items: stretch;
+	flex-wrap: nowrap;
+}
+
+
+.volver{
+  border: solid black;
+	font-size:30px;
+	width: 100px;
+	border-radius:8px;
+	float:left;
+  padding: 3px
+}
+
+.aux{
+  border: solid black;
+	font-size:30px;
+	width: 100px;
+	border-radius:8px;
+	float:right;
+  padding: 3px
+}
