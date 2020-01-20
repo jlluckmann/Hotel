@@ -13,9 +13,13 @@
 		<link href="../../css/styles.css" rel="stylesheet" type="text/css"/>
 	</head>
 	<body>
+<<<<<<< HEAD
 		<font size=5  align="left">
 			<p>Estás seguro que deseas eliminar el registro del alumno de rut: <?php echo"$rut"?> ?</p>
 		</font>
+=======
+		<p>Estás seguro que deseas eliminar el registro del cliente de rut: <?php echo"$rut"?> ?</p>
+>>>>>>> 286d6ad06f45aca9990e31a8ff40db71b47a64d1
 		<br>
 		<?php 	echo"<form method=\"get\" action=\"delete_cliente.php\">";
 				echo"<input type=\"hidden\" name=\"rut\" value=\"$rut\" >";
