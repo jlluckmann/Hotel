@@ -6,7 +6,10 @@
 	</head>
 	<body>
 	<header>
-	<h1 align="center">Habitaciones Disponibles</h1>
+		<nav class="topnav">
+				<a href="../menu.html"><h1  align="left"> Volver </h1> </a>
+		</nav>
+	  <h1 align="center">Habitaciones Disponibles</h1>
 	</header>
 <div class="cuerpo_center2" align="center">
 <table border = '1' style = "border-collapse: collapse;" bgcolor = '#33334d'>

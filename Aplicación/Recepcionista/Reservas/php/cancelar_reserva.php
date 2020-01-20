@@ -9,8 +9,12 @@
 	</head>
   <body>
 
-		<!--formulario - Tablita-->
-    <form action="lista_reservas_cancelar.php" method="get">
+		<header>
+			<nav class="topnav">
+					<a href="../menu.html"><h1  align="left"> Volver </h1> </a>
+			</nav>
+		</header>
+  <form action="lista_reservas_cancelar.php" method="get">
        <h1 align="center">Buscador:</h1>
        <h2> Reservas </h2>
 
@@ -43,6 +47,5 @@
  		</select>
     <input type="submit" value= "Enviar"/>
     </form></div>
-<p><a href="../menu.html" style="color:#FFFFFF;">Volver</p>
   </body>
 </html>
