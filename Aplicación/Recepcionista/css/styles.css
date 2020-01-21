@@ -76,6 +76,17 @@ header {
    overflow: scroll;
 }
 
+.pantalla_blanca{
+   background: #FFFFFF;
+   border-radius:10px;
+	 border-width: auto;
+   margin-top:-80px;
+   margin-bottom: -20px;
+	 height: auto;
+	 width: auto;
+	 vertical-align: bottom;
+	 padding: 10px;
+}
 
 
 a:link {

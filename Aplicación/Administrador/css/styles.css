@@ -107,3 +107,11 @@ overflow: scroll;
 	float:right;
   padding: 3px
 }
+
+#mes{
+  position: relative;
+  left: 220px;
+  bottom: 47px;
+  color: white;
+
+}

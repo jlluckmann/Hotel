@@ -28,7 +28,7 @@
 					<a href="../ganancias.html"><h1  align="left"> Volver </h1> </a>
 			</nav>
 			<font size=5  align="justify">
-				<p>Las ganacias del mes de <?php echo "$Mes" ?> son $
+				<p>Las ganancias del mes de <?php echo "$Mes" ?> son $
 					<?php if(!empty($fila[0]))
 					 			{
 									echo "$fila[0]";

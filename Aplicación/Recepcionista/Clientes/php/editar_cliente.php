@@ -29,7 +29,7 @@
 		</header>
 				<form method="get" action="update_cliente.php">
 					<section id="contenedor_center">
-						<div>
+						<div class='pantalla_blanca'>
 
 							<h3> Datos Personales </h3>
 							<font size=4  align="center"><h>Rut</h></font>
@@ -51,11 +51,14 @@
 							<br>
 							<?php echo"<input type=\"text\" name=\"apellido_m\" size=\"20px\" title=\"Ingrese apellido materno\" value=\"$fila[3]\" required>" ?>
 							<br>
+							<br>
 						</div>
 				</section>
 				<br>
 				<br>
-				<input type="submit" value="Guardar">
+					<div align='center'>
+						<input type="submit" value="Guardar">
+					</div>
 				</form>
 	</body>
 </html>

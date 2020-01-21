@@ -11,9 +11,9 @@
 		</nav>
 	  <h1 align="center">Precios Habitaciones</h1>
 	</header>
-<div class="cuerpo_center2" align="center">
-<table border = '1' style = "border-collapse: collapse;" bgcolor = '#33334d'>
-	<tr bgcolor="#000033" style="font-weight: bold; color:white">
+<div  align="center">
+<table border = '2' style = "border-collapse: collapse;" bgcolor = '#FFFFFF'>
+	<tr bgcolor="#303030" style="font-weight: bold; color:white">
 		<td>
 			Tipo de Habitación
 		</td>

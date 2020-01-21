@@ -28,7 +28,7 @@
 				echo"<td><input type=\"submit\" value=\"Sí, Eliminar\"></td>";
 				echo"</form> ";
 				echo"<form method=\"get\" action=\"../menu.html\">";
-				echo"<td><input type=\"submit\" value=\"NO\"></td>";
+				echo"<td><input type=\"submit\" value=\"No\"></td>";
 				echo"</form> ";
 		?>
 	</body>
