@@ -30,7 +30,7 @@
 			<nav class="topnav">
 					<a href="precios.php"><h1  align="left"> Volver </h1> </a>
 			</nav>
-			<font size=5  align="justify">
+			<font size=5  align="center">
 				<p>Los precios de las habitaciones se han cambiado correctamente.</p>
 			</font>
 		</header>

@@ -22,10 +22,10 @@
 			<nav class="topnav">
 					<a href="../menu.html"><h1  align="left"> Volver </h1> </a>
 			</nav>
-			<font size=5  align="justify">
+			<font size=5  align="center">
 				<p>El registro se ha eliminado correctamente.</p>
 			</font>
 		</header>
 	</body>
-	
+
 </html>

@@ -27,7 +27,7 @@
 			<nav class="topnav">
 					<a href="../ganancias.html"><h1  align="left"> Volver </h1> </a>
 			</nav>
-			<font size=5  align="justify">
+			<font size=5  align="center">
 				<p>Las ganancias del mes de <?php echo "$Mes" ?> son $
 					<?php if(!empty($fila[0]))
 					 			{
